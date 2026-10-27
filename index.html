@@ -28,7 +28,7 @@
     <!-- HERO -->
     <section id="inicio" class="hero">
       <div class="hero-text">
-        <span class="badge">🦊 Comunidad para RENE</span>
+        <span class="badge">🦊 Comunidad para todos</span>
         <h1>Bienvenido al mundo <span class="gradient-text">furry</span></h1>
         <p>Arte, disfraces, amistad y mucha creatividad. Un espacio seguro y divertido para quienes aman a los personajes animales antropomórficos.</p>
         <div class="hero-buttons">
@@ -147,6 +147,27 @@
     <p>🐾 PawVerse © 2026 — Hecho con cariño para la comunidad.</p>
     <p class="footer-links"><a href="#inicio">Volver arriba ↑</a></p>
   </footer>
+
+  <script>
+    const grid = document.getElementById('speciesGrid');
+    const message = document.getElementById('feelMessage');
+    const cards = grid.querySelectorAll('.species');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        cards.forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
+
+        const emoji = card.querySelector('span').textContent;
+        message.textContent = `${emoji} ¡Te sientes muy ${card.dataset.feel}! 🐾`;
+
+        // reinicia la animación del mensaje
+        message.classList.remove('pop');
+        void message.offsetWidth;
+        message.classList.add('pop');
+      });
+    });
+  </script>
 
 </body>
 </html>
