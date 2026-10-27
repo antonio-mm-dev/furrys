@@ -89,14 +89,16 @@
     <section id="galeria" class="section">
       <h2>Elige tu especie</h2>
       <p class="section-sub">Cada fursona es única. ¿Cuál es la tuya?</p>
-      <div class="species-grid">
-        <div class="species fox"><span>🦊</span><h3>Zorro</h3></div>
-        <div class="species wolf"><span>🐺</span><h3>Lobo</h3></div>
-        <div class="species cat"><span>🐱</span><h3>Gato</h3></div>
-        <div class="species bunny"><span>🐰</span><h3>Conejo</h3></div>
-        <div class="species bear"><span>🐻</span><h3>Oso</h3></div>
-        <div class="species dragon"><span>🐉</span><h3>Dragón</h3></div>
+      <div class="species-grid" id="speciesGrid">
+        <button type="button" class="species fox" data-feel="zorrita"><span>🦊</span><h3>Zorro</h3></button>
+        <button type="button" class="species wolf" data-feel="lobita"><span>🐺</span><h3>Lobo</h3></button>
+        <button type="button" class="species dog" data-feel="perrita"><span>🐶</span><h3>Perro</h3></button>
+        <button type="button" class="species cat" data-feel="gatita"><span>🐱</span><h3>Gato</h3></button>
+        <button type="button" class="species bunny" data-feel="conejita"><span>🐰</span><h3>Conejo</h3></button>
+        <button type="button" class="species bear" data-feel="osita"><span>🐻</span><h3>Oso</h3></button>
+        <button type="button" class="species dragon" data-feel="dragoncita"><span>🐉</span><h3>Dragón</h3></button>
       </div>
+      <p class="feel-message" id="feelMessage" aria-live="polite">Toca una especie para ver cómo te sientes 👆</p>
     </section>
 
     <!-- EVENTOS -->
